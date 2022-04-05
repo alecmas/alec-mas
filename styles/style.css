@@ -1,0 +1,44 @@
+:root {
+  --color-primary: #1c1c1d;
+  --color-secondary: #37984f;
+}
+
+body {
+  background-color: var(--color-primary);
+}
+
+main {
+  position: relative;
+  min-height: 100vh;
+}
+
+section {
+  background-color: var(--color-secondary);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+.nav-buttons {
+  position: relative;
+  color: white;
+  background-color: blue;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=style.css.map */
