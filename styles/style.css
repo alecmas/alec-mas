@@ -1,31 +1,24 @@
 :root {
   --color-primary: #1c1c1d;
   --color-secondary: #37984f;
+  --color-tertiary: #154b23;
 }
 
 body {
-  background-color: var(--color-primary);
-}
-
-main {
-  position: relative;
-  min-height: 100vh;
+  background-color: black;
 }
 
 section {
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.5;
 }
 
-.nav-buttons {
-  position: relative;
-  color: white;
-  background-color: blue;
+.nav-controls {
+  position: fixed;
   z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -40,5 +33,42 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  top: 80vh;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.nav-controls .active-control {
+  background-color: var(--color-secondary) !important;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.nav-controls .control {
+  padding: 1rem;
+  background-color: var(--color-tertiary);
+  cursor: pointer;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: .8rem;
+  -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.nav-controls .control i {
+  font-size: 1.5rem;
+  color: white;
+  pointer-events: none;
 }
 /*# sourceMappingURL=style.css.map */
