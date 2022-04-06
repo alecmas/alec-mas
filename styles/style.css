@@ -1,7 +1,7 @@
 :root {
   --color-primary: #1c1c1d;
-  --color-secondary: #37984f;
-  --color-tertiary: #154b23;
+  --color-secondary: hsl(135, 70%, 45%);
+  --color-tertiary: hsl(135, 70%, 15%);
 }
 
 body {
@@ -9,12 +9,87 @@ body {
 }
 
 section {
-  background-color: var(--color-primary);
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  -webkit-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
+  display: none;
+}
+
+.home-section {
+  background-color: var(--color-primary);
+}
+
+.home-section .home-content {
+  color: white;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 35vh;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  font-family: 'Raleway', sans-serif;
+  font-size: 3rem;
+  letter-spacing: .1em;
+}
+
+#resume {
+  background-color: var(--color-secondary);
+}
+
+#code {
+  background-color: #67e487;
+}
+
+#art {
+  background-color: #0b4119;
+}
+
+#music {
+  background-color: #0f5721;
+}
+
+#basketball {
+  background-color: #178232;
+}
+
+.active-section {
+  display: block;
+  -webkit-animation: scaleAnim 1s ease-in-out;
+          animation: scaleAnim 1s ease-in-out;
+}
+
+@-webkit-keyframes scaleAnim {
+  0% {
+    -webkit-transform: translateY(-100%) scaleY(0);
+            transform: translateY(-100%) scaleY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1);
+            transform: translateY(0) scaleY(1);
+  }
+}
+
+@keyframes scaleAnim {
+  0% {
+    -webkit-transform: translateY(-100%) scaleY(0);
+            transform: translateY(-100%) scaleY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1);
+            transform: translateY(0) scaleY(1);
+  }
 }
 
 .nav-controls {
