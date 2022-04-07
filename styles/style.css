@@ -6,6 +6,7 @@
 
 body {
   background-color: black;
+  overflow-x: hidden;
 }
 
 section {
@@ -19,11 +20,11 @@ section {
   display: none;
 }
 
-.home-section {
+#home {
   background-color: var(--color-primary);
 }
 
-.home-section .home-content {
+#home .home-content {
   color: white;
   position: fixed;
   display: -webkit-box;
@@ -66,29 +67,59 @@ section {
 
 .active-section {
   display: block;
-  -webkit-animation: scaleAnim 1s ease-in-out;
-          animation: scaleAnim 1s ease-in-out;
+  -webkit-animation: slidein 1s ease-in-out;
+          animation: slidein 1s ease-in-out;
+  z-index: 1;
 }
 
-@-webkit-keyframes scaleAnim {
+@-webkit-keyframes slidein {
   0% {
-    -webkit-transform: translateY(-100%) scaleY(0);
-            transform: translateY(-100%) scaleY(0);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
   100% {
-    -webkit-transform: translateY(0) scaleY(1);
-            transform: translateY(0) scaleY(1);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
-@keyframes scaleAnim {
+@keyframes slidein {
   0% {
-    -webkit-transform: translateY(-100%) scaleY(0);
-            transform: translateY(-100%) scaleY(0);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
   100% {
-    -webkit-transform: translateY(0) scaleY(1);
-            transform: translateY(0) scaleY(1);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.inactive-section {
+  display: block;
+  -webkit-animation: slideout 1s ease-in-out;
+          animation: slideout 1s ease-in-out;
+  z-index: 0;
+}
+
+@-webkit-keyframes slideout {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes slideout {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
 }
 

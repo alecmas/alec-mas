@@ -6,6 +6,7 @@
 
 body {
     background-color: black;
+    overflow-x: hidden;
 }
 
 section {
@@ -18,7 +19,7 @@ section {
     display: none;
 }
 
-.home-section {
+#home {
     background-color: var(--color-primary);
 
     .home-content {
@@ -58,16 +59,30 @@ section {
 
 .active-section {
     display: block;
-    animation: scaleAnim 1s ease-in-out;
-    @keyframes scaleAnim {
+    animation: slidein 1s ease-in-out;
+    @keyframes slidein {
         0% {
-            transform: translateY(-100%) scaleY(0)
+            transform: translateX(-100%)
         }
-
         100% {
-            transform: translateY(0) scaleY(1)
+            transform: translateX(0)
         }
     }
+    z-index: 1;
+}
+
+.inactive-section {
+    display: block;
+    animation: slideout 1s ease-in-out;
+    @keyframes slideout {
+        0% {
+            transform: translateX(0)
+        }
+        100% {
+            transform: translateX(100%)
+        }
+    }
+    z-index: 0;
 }
 
 .nav-controls {
