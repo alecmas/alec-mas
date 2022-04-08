@@ -5,8 +5,6 @@ TODO
 --------------------------------
 - write program to export resume as a .pdf/.docx OR find a way to read from .pdf/docx to update webpage
 - display basketball videos and pictures saved over the years in a pretty way
-- fix animation of button on home screen to fill from right instead of fading in
-- when sliding sections in and out, account for if the section should go left or right off screen
 --------------------------------
 
 --------------------------------

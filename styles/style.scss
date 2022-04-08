@@ -59,8 +59,17 @@ section {
 
 .active-section {
     display: block;
-    animation: slidein 1s ease-in-out;
-    @keyframes slidein {
+    z-index: 1;
+}
+
+.inactive-section {
+    display: block;
+    z-index: 0;
+}
+
+.slidein-from-left {
+    animation: slidein-from-left 1s ease-in-out;
+    @keyframes slidein-from-left {
         0% {
             transform: translateX(-100%)
         }
@@ -68,13 +77,35 @@ section {
             transform: translateX(0)
         }
     }
-    z-index: 1;
 }
 
-.inactive-section {
-    display: block;
-    animation: slideout 1s ease-in-out;
-    @keyframes slideout {
+.slidein-from-right {
+    animation: slidein-from-right 1s ease-in-out;
+    @keyframes slidein-from-right {
+        0% {
+            transform: translateX(100%)
+        }
+        100% {
+            transform: translateX(0)
+        }
+    }
+}
+
+.slideout-to-left {
+    animation: slideout-to-left 1s ease-in-out;
+    @keyframes slideout-to-left {
+        0% {
+            transform: translateX(0)
+        }
+        100% {
+            transform: translateX(-100%)
+        }
+    }
+}
+
+.slideout-to-right {
+    animation: slideout-to-right 1s ease-in-out;
+    @keyframes slideout-to-right {
         0% {
             transform: translateX(0)
         }
@@ -82,7 +113,6 @@ section {
             transform: translateX(100%)
         }
     }
-    z-index: 0;
 }
 
 .nav-controls {
