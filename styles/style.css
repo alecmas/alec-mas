@@ -20,11 +20,7 @@ section {
   display: none;
 }
 
-#home {
-  background-color: var(--color-primary);
-}
-
-#home .home-content {
+.content {
   color: white;
   position: fixed;
   display: -webkit-box;
@@ -43,6 +39,10 @@ section {
   font-family: 'Raleway', sans-serif;
   font-size: 3rem;
   letter-spacing: .1em;
+}
+
+#home {
+  background-color: var(--color-primary);
 }
 
 #resume {
@@ -199,7 +199,7 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  top: 80vh;
+  top: 85vh;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
